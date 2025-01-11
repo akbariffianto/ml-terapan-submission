@@ -328,7 +328,7 @@ Hasil evaluasi pada data latih dan data test adalah sebagai berikut.
 
 ![Setelah Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/setelah_hypertuning.png?raw=true)
 
-Berdasarkan nilai MSE, model Random Forest (RF) adalah pilihan terbaik untuk dataset ini. RF memberikan prediksi yang paling akurat dengan potensi overfitting yang paling kecil dibandingkan KNN dan Boosting. Meskipun Boosting memberikan performa yang lebih baik dari KNN, ia masih menunjukkan potensi overfitting yang lebih tinggi dibandingkan RF. Perlu diingat bahwa ini hanya berdasarkan metrik MSE. Evaluasi metrik lain seperti R-squared, MAE, atau RMSE juga disarankan untuk mendapatkan gambaran yang lebih komprehensif. Selain itu, teknik cross-validation dapat digunakan untuk validasi yang lebih kuat.
+Berdasarkan nilai MSE, model Random Forest (RF) adalah pilihan terbaik untuk dataset ini. RF memberikan prediksi yang paling akurat dengan potensi overfitting yang paling kecil dibandingkan KNN dan Boosting. Meskipun Boosting memberikan performa yang lebih baik dari KNN, ia masih menunjukkan potensi overfitting yang lebih tinggi dibandingkan RF.
 
 ## Kesimpulan
 Proyek ini berhasil mengembangkan model analisis prediktif menggunakan model Random Forest yang mampu memperkirakan harga real estate berdasarkan jumlah toko swalayan terdekat, jarak ke MRT, dan akses MRT ke pusat kota dengan tingkat akurasi yang lebih tinggi.
