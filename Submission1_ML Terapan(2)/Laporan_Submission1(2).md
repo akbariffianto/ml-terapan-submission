@@ -137,8 +137,6 @@ Keterangan:
 Pada kolom management_org dan num_partition dataset menggunakan karakter Hanzi 有 (yǒu) yang berarti 'ada' dan 無 (wú) yang berarti 'tidak ada' untuk menandakan keberadaan atau ketiadaan value pada kolomnya. Agar dalam menganalisis dan memodelkan dataset di langkah akhir, keputusan mengubah karakter tersebut menjadi 1 dan 0 disarankan untuk dilakukan. 
 
 ### Univariate Analysis:
-![Univariate](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/univariate.png?raw=true)
-
 #### Categorical Features: 
 
 ![district](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/district.png?raw=true)
@@ -211,7 +209,7 @@ Reduksi dimensi adalah metode untuk mengurangi jumlah fitur dalam dataset sambil
 
 PCA bekerja dengan memanfaatkan konsep aljabar linier dan mengidentifikasi arah dengan varians terbesar dalam data, karena arah tersebut dianggap paling signifikan. Teknik ini sangat berguna ketika variabel dalam dataset memiliki korelasi yang tinggi, yang menunjukkan adanya redundansi atau pengulangan informasi dalam data.
 
-Berikut grafik pairplot untuk melihat skor korelasi fitur numerik untuk menggabungkannya sehingga data yang digunakan dimensinya(fitur) berkurang.
+Berikut salah satu grafik pairplot untuk melihat skor korelasi fitur numerik untuk menggabungkannya sehingga data yang digunakan dimensinya(fitur) berkurang.
 ![Facility PCA](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/facility_pca.png?raw=true)
 
 ###### Korelasi PCA
@@ -306,9 +304,9 @@ Fungsi kuadrat dalam MSE memiliki sifat matematika yang baik, yaitu dapat dituru
 ### Hasil Evaluasi Sebelum Hyperparameter Tuning
 Hasil evaluasi pada data latih dan data test adalah sebagai berikut.
 
-![Setelah Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/setelah_hypertuning.png?raw=true)
+![Sebelum Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/sebelum_hypertuning.png?raw=true)
 
-Dari grafik di atas, terlihat bahwa, model Random Forest (RF) memberikan nilai eror yang paling kecil. Sedangkan model dengan algoritma Boosting memiliki eror yang paling besar. Sehingga model RF yang akan dipilih sebagai model terbaik untuk melakukan prediksi harga properti.
+Berdasarkan nilai MSE, model Random Forest (RF) adalah pilihan terbaik untuk dataset ini. RF memberikan prediksi yang paling akurat dengan potensi overfitting yang paling kecil dibandingkan KNN dan Boosting. Meskipun Boosting memberikan performa yang lebih baik dari KNN, ia masih menunjukkan potensi overfitting yang lebih tinggi dibandingkan RF. Perlu diingat bahwa ini hanya berdasarkan metrik MSE. Evaluasi metrik lain seperti R-squared, MAE, atau RMSE juga disarankan untuk mendapatkan gambaran yang lebih komprehensif. Selain itu, teknik cross-validation dapat digunakan untuk validasi yang lebih kuat.
 
 ### Proses Hyperparameter Tuning
 Hyperparameter tuning dilakukan pada model yang digunakan untuk meningkatkan performa model. 
@@ -319,9 +317,9 @@ Menggunakan pencarian grid (GridSearchCV) untuk menemukan kombinasi parameter te
 ### Hasil Evaluasi Setelah Hyperparameter Tuning
 Hasil evaluasi pada data latih dan data test adalah sebagai berikut.
 
-![Sebelum Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/sebelum_hypertuning.png?raw=true)
+![Setelah Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/setelah_hypertuning.png?raw=true)
 
-Berdasarkan nilai MSE, model Random Forest (RF) adalah pilihan terbaik untuk dataset ini. RF memberikan prediksi yang paling akurat dengan potensi overfitting yang paling kecil dibandingkan KNN dan Boosting. Meskipun Boosting memberikan performa yang lebih baik dari KNN, ia masih menunjukkan potensi overfitting yang lebih tinggi dibandingkan RF. Perlu diingat bahwa ini hanya berdasarkan metrik MSE. Evaluasi metrik lain seperti R-squared, MAE, atau RMSE juga disarankan untuk mendapatkan gambaran yang lebih komprehensif. Selain itu, teknik cross-validation dapat digunakan untuk validasi yang lebih kuat.
+Berdasarkan evaluasi setelah Grid Search dengan metrik MSE, Random Forest (RF) jelas merupakan model terbaik untuk dataset ini. RF memberikan prediksi yang jauh lebih akurat (MSE lebih rendah) dan juga menunjukkan potensi overfitting yang jauh lebih kecil dibandingkan KNN dan AdaBoost. Oleh karena itu, RF akan menjadi pilihan yang lebih baik untuk melakukan prediksi pada data baru.
 
 ## Kesimpulan
 Proyek ini berhasil mengembangkan model analisis prediktif menggunakan model Random Forest yang mampu memperkirakan harga real estate berdasarkan jumlah toko swalayan terdekat, jarak ke MRT, dan akses MRT ke pusat kota dengan tingkat akurasi yang lebih tinggi.
