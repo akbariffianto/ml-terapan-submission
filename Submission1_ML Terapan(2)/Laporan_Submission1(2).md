@@ -140,25 +140,32 @@ Pada kolom management_org dan num_partition dataset menggunakan karakter Hanzi æ
 #### Categorical Features: 
 
 ![district](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/district.png?raw=true)
+
 **district**: 
 Distrik Zhongshan memiliki persentase paling tinggi dalam fitur district. Zhongshan sendiri merupakan kota yang paling sibuk di kota taipei, jadi masuk akal jika distrik ini memilik persentasi paling tinggi. Namun urutan data distrik ini bukan berdasarkan penduduk terbesar maupun daerah terluas.
 
 ![transaction_type](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/transaction_type.png?raw=true)
+
 **transaction_type**: Distribusi tipe transaksi dalam dataset properti menunjukkan bahwa mayoritas transaksi (60%, 3336 sampel) didominasi oleh tipe "Premises (Tanah & Bangunan)", yang mengindikasikan bahwa sebagian besar transaksi melibatkan penjualan atau pembelian properti yang sudah berdiri di atas tanah. Tipe transaksi "Premises + Parkir (Tanah & Bangunan + Tempat Parkir)" juga cukup signifikan, mencakup 27% (1485 sampel) dari total transaksi, yang menyoroti pentingnya ketersediaan tempat parkir dalam pasar properti. Sebaliknya, transaksi yang hanya melibatkan "Tanah (Land)" relatif sedikit, yaitu 8% (436 sampel), menunjukkan bahwa transaksi tanah kosong lebih jarang terjadi. Hal serupa juga terlihat pada transaksi "Garasi (Garage)" yang hanya mencakup 4% (239 sampel), mengindikasikan bahwa transaksi garasi terpisah juga tidak umum. Terakhir, transaksi yang hanya melibatkan "Bangunan (Building)" sangat jarang, kurang dari 1% (hanya 23 sampel), kemungkinan besar karena secara hukum dan praktis, kepemilikan bangunan seringkali terkait erat dengan tanah tempat bangunan tersebut berdiri.
 
 ![urban_land_use](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/urban_land_use.png?raw=true)
+
 **urban_land_use**: Dataset didominasi oleh penggunaan lahan untuk "Address" (Alamat/Perumahan) (60%), diikuti oleh "Quotient" (kemungkinan area komersial/campuran) (28%). Penggunaan lahan untuk "Other" (Lainnya) cukup signifikan (10%), sementara "work" (kerja), "Others" (Lain-lain), dan "Agriculture" (Pertanian) sangat sedikit (<1%). Dataset ini cenderung berfokus pada properti residensial dan kemungkinan area komersial/campuran.
 
 ![main_use](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/main_use.png?raw=true)
+
 **main_use**: Penggunaan utama properti didominasi oleh "Resident" (Hunian) dengan 64.7% (3572 sampel). Diikuti oleh "See other registration items" (Lihat item registrasi lainnya) dengan 22.6% (1246 sampel), yang memerlukan penjelasan lebih lanjut mengenai isi kategori ini. Penggunaan "For commercial use" (Untuk penggunaan komersial) sebesar 7.9% (436 sampel) cukup signifikan. Kategori-kategori lain seperti "See license" (Lihat lisensi), "Parking space" (Tempat parkir), "Residential business" (Bisnis hunian), "industrial use" (Penggunaan industri), dan "For work" (Untuk pekerjaan) memiliki persentase yang sangat kecil (<2.5% masing-masing). Dataset ini menunjukkan fokus utama pada properti hunian, dengan sebagian kecil untuk penggunaan komersial dan kategori lainnya.
 
 ![main_building_material](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/main_building_material.png?raw=true)
+
 **main_building_material**: Sebagian besar properti (81.2%) dibangun dengan konstruksi beton bertulang ("Reinforced concrete construction"). Kategori "Not Applicable" (Tidak Berlaku) menempati urutan kedua (8.9%), yang perlu investigasi lebih lanjut. Bahan lain seperti "Strengthen brickwork" (Dinding bata yang diperkuat) (4.5%), "See other registration items" (Lihat item registrasi lainnya) (2.6%), dan "Steel reinforced concrete construction" (Konstruksi beton bertulang baja) (2.0%) muncul dalam jumlah kecil. Bahan-bahan lain sangat jarang (<0.5%). 
 
 ![num_partition](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/num_partition.png?raw=true)
+
 **num_partition**: Data fitur `num_partition` menunjukkan ketidakseimbangan yang sangat signifikan. Sebagian besar data (93.6% atau 5166 sampel) berada dalam kategori "1", sementara hanya sebagian kecil (6.4% atau 353 sampel) berada dalam kategori "0". Singkatnya, hampir semua sampel memiliki nilai "1" pada fitur num_partition, sehingga fitur ini mungkin kurang informatif atau bahkan tidak berguna untuk beberapa jenis analisis atau pemodelan karena kurangnya variasi.
 
 ![management_org](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/management_org.png?raw=true)
+
 **management_org**: Distribusi fitur management_org menunjukkan bahwa mayoritas sampel (57% atau 3146 sampel) memiliki nilai "1", sedangkan sisanya (43% atau 2373 sampel) memiliki nilai "0". Meskipun terdapat perbedaan jumlah antara kedua kategori, perbedaannya tidak terlalu besar dan kedua kategori terwakili dengan cukup baik. Singkatnya, fitur management_org menunjukkan distribusi yang cukup seimbang antara dua kategori, meskipun kategori "1" sedikit lebih dominan.
 
 #### Numerical Features:
@@ -319,7 +326,11 @@ Hasil evaluasi pada data latih dan data test adalah sebagai berikut.
 
 ![Setelah Hypertuning](https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/assets/setelah_hypertuning.png?raw=true)
 
+<<<<<<< HEAD
 Berdasarkan evaluasi setelah Grid Search dengan metrik MSE, Random Forest (RF) jelas merupakan model terbaik untuk dataset ini. RF memberikan prediksi yang jauh lebih akurat (MSE lebih rendah) dan juga menunjukkan potensi overfitting yang jauh lebih kecil dibandingkan KNN dan AdaBoost. Oleh karena itu, RF akan menjadi pilihan yang lebih baik untuk melakukan prediksi pada data baru.
+=======
+Berdasarkan nilai MSE, model Random Forest (RF) adalah pilihan terbaik untuk dataset ini. RF memberikan prediksi yang paling akurat dengan potensi overfitting yang paling kecil dibandingkan KNN dan Boosting. Meskipun Boosting memberikan performa yang lebih baik dari KNN, ia masih menunjukkan potensi overfitting yang lebih tinggi dibandingkan RF.
+>>>>>>> 4ce76db6ffaab8789639d837d57d3ed696e1468f
 
 ## Kesimpulan
 Proyek ini berhasil mengembangkan model analisis prediktif menggunakan model Random Forest yang mampu memperkirakan harga real estate berdasarkan jumlah toko swalayan terdekat, jarak ke MRT, dan akses MRT ke pusat kota dengan tingkat akurasi yang lebih tinggi.
